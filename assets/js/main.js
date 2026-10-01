@@ -1,6 +1,7 @@
 // Affiche le prochain rendez-vous de data/agenda.js dans la carte « Prochaine réunion ».
 (function () {
   var target = document.getElementById("prochaine-reunion");
+  var hero = document.getElementById("hero-next");
   var agenda = window.APE_AGENDA;
   if (!target || !Array.isArray(agenda)) return;
 
@@ -30,4 +31,13 @@
   target.appendChild(p(hour + (next.e.lieu ? " · " + next.e.lieu : "")));
   if (next.e.titre) target.appendChild(p(next.e.titre));
   if (next.e.details) target.appendChild(p(next.e.details));
+
+  if (hero) {
+    hero.textContent = "";
+    var strong = document.createElement("strong");
+    strong.textContent = "Prochaine réunion : " + day;
+    hero.appendChild(strong);
+    hero.appendChild(document.createTextNode(hour + (next.e.lieu ? " · " + next.e.lieu.split(",")[0] : "")));
+    hero.hidden = false;
+  }
 })();

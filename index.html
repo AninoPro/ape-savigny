@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>APE de Savigny-sur-Braye – Association des parents d'élèves</title>
   <meta name="description" content="L'association des parents d'élèves de Savigny-sur-Braye finance les projets de l'école maternelle et de l'école élémentaire : sorties, séjours, fêtes. Rejoignez-nous !">
-  <meta name="theme-color" content="#5a3c93">
+  <meta name="theme-color" content="#5b3fd1">
   <link rel="canonical" href="https://ape-savigny.fr/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
@@ -13,7 +13,9 @@
   <meta property="og:title" content="APE de Savigny-sur-Braye">
   <meta property="og:description" content="Des parents bénévoles qui financent les sorties, les séjours et les fêtes des écoles de Savigny-sur-Braye.">
   <meta property="og:url" content="https://ape-savigny.fr/">
-  <link rel="preload" href="assets/fonts/fredoka-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <meta property="og:image" content="https://ape-savigny.fr/assets/img/petit-train.webp">
+  <link rel="preload" href="assets/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -22,11 +24,11 @@
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="#top" aria-label="APE de Savigny-sur-Braye, retour en haut">
-        <span class="brand-mark" aria-hidden="true">APE</span>
-        <span>Savigny-sur-Braye<small>Association des parents d'élèves</small></span>
+        <b>APE</b>
+        <span>Savigny-sur-Braye</span>
       </a>
       <nav class="nav" aria-label="Navigation principale">
-        <a href="#annee">Nos projets</a>
+        <a href="#projets">Nos projets</a>
         <a href="#enfants">Pour les enfants</a>
         <a href="#contact">Contact</a>
         <a class="btn" href="#rejoindre">Nous rejoindre</a>
@@ -40,181 +42,147 @@
     <!-- Accueil -->
     <section class="hero">
       <div class="wrap">
-        <div class="hero-copy">
-          <h1>Des projets, des fêtes et des souvenirs pour les écoliers de Savigny</h1>
-          <p class="lede">Des parents bénévoles qui aident l'école maternelle et l'école élémentaire à faire vivre leurs projets.</p>
+        <div>
+          <h1>Des fêtes, des sorties et des souvenirs pour les écoliers de Savigny</h1>
+          <p class="lede">L'APE, ce sont des parents bénévoles qui aident l'école maternelle et l'école élémentaire à réaliser leurs projets.</p>
           <div class="actions">
             <a class="btn" href="#rejoindre">Rejoindre l'APE</a>
-            <a class="btn btn--ghost" href="#annee">Voir nos projets</a>
+            <a class="link-arrow" href="#projets">Découvrir nos projets</a>
           </div>
         </div>
 
-        <div class="hero-scene" aria-hidden="true">
-          <svg viewBox="0 0 900 250" focusable="false">
-            <defs>
-              <g id="kid">
-                <circle cx="0" cy="0" r="21" fill="currentColor"/>
-                <circle cx="-7" cy="-3" r="2.6" fill="#2b1f3d"/>
-                <circle cx="7" cy="-3" r="2.6" fill="#2b1f3d"/>
-                <path d="M-8 6 Q0 14 8 6" fill="none" stroke="#2b1f3d" stroke-width="2.6" stroke-linecap="round"/>
-              </g>
-            </defs>
-
-            <!-- rails -->
-            <g>
-              <rect x="0" y="228" width="900" height="6" fill="#8f73c4"/>
-              <path d="M0 240 H900" stroke="#cdb8ee" stroke-width="4" stroke-dasharray="14 18"/>
-            </g>
-
-            <g class="train">
-              <!-- wagon 1 -->
-              <rect x="30" y="118" width="240" height="84" rx="14" fill="#ffc93f" stroke="#2b1f3d" stroke-width="4"/>
-              <rect x="30" y="170" width="240" height="14" fill="#2b1f3d" opacity=".12"/>
-              <use href="#kid" x="80" y="108" color="#f7c59f"/>
-              <use href="#kid" x="150" y="104" color="#8d5a3b"/>
-              <use href="#kid" x="220" y="108" color="#ffe0b8"/>
-              <rect x="30" y="118" width="240" height="84" rx="14" fill="none" stroke="#2b1f3d" stroke-width="4"/>
-              <circle cx="80" cy="206" r="20" fill="#2b1f3d"/><circle cx="80" cy="206" r="7" fill="#cdb8ee"/>
-              <circle cx="220" cy="206" r="20" fill="#2b1f3d"/><circle cx="220" cy="206" r="7" fill="#cdb8ee"/>
-
-              <!-- attelage -->
-              <rect x="270" y="176" width="40" height="8" fill="#2b1f3d"/>
-
-              <!-- wagon 2 -->
-              <rect x="310" y="118" width="240" height="84" rx="14" fill="#bfebdd" stroke="#2b1f3d" stroke-width="4"/>
-              <use href="#kid" x="360" y="106" color="#d9a07a"/>
-              <use href="#kid" x="430" y="110" color="#ffe0b8"/>
-              <use href="#kid" x="500" y="104" color="#f7c59f"/>
-              <rect x="310" y="118" width="240" height="84" rx="14" fill="none" stroke="#2b1f3d" stroke-width="4"/>
-              <circle cx="360" cy="206" r="20" fill="#2b1f3d"/><circle cx="360" cy="206" r="7" fill="#cdb8ee"/>
-              <circle cx="500" cy="206" r="20" fill="#2b1f3d"/><circle cx="500" cy="206" r="7" fill="#cdb8ee"/>
-
-              <!-- attelage -->
-              <rect x="550" y="176" width="40" height="8" fill="#2b1f3d"/>
-
-              <!-- locomotive -->
-              <rect x="590" y="116" width="170" height="86" rx="14" fill="#5a3c93" stroke="#2b1f3d" stroke-width="4"/>
-              <rect x="700" y="72" width="110" height="130" rx="14" fill="#3f2870" stroke="#2b1f3d" stroke-width="4"/>
-              <rect x="690" y="62" width="130" height="16" rx="8" fill="#2b1f3d"/>
-              <rect x="722" y="94" width="48" height="42" rx="8" fill="#fcfaff" stroke="#2b1f3d" stroke-width="3"/>
-              <use href="#kid" x="746" y="122" color="#ffe0b8" transform="translate(746 122) scale(.62) translate(-746 -122)"/>
-              <rect x="618" y="76" width="34" height="44" rx="6" fill="#2b1f3d"/>
-              <rect x="608" y="68" width="54" height="14" rx="7" fill="#2b1f3d"/>
-              <circle cx="840" cy="176" r="10" fill="#ffc93f" stroke="#2b1f3d" stroke-width="3"/>
-              <circle cx="640" cy="206" r="22" fill="#2b1f3d"/><circle cx="640" cy="206" r="8" fill="#ffc93f"/>
-              <circle cx="716" cy="206" r="22" fill="#2b1f3d"/><circle cx="716" cy="206" r="8" fill="#ffc93f"/>
-              <circle cx="784" cy="206" r="22" fill="#2b1f3d"/><circle cx="784" cy="206" r="8" fill="#ffc93f"/>
-              <g fill="#fff" opacity="0">
-                <circle class="puff" cx="636" cy="52" r="14"/>
-                <circle class="puff" cx="650" cy="38" r="10"/>
-              </g>
-            </g>
-          </svg>
+        <div class="collage">
+          <figure class="c-train">
+            <img src="assets/img/petit-train.webp" width="1400" height="1050" alt="Le petit train décoré pour le marché de Noël de Savigny-sur-Braye, prêt à embarquer les enfants.">
+          </figure>
+          <figure class="c-illu">
+            <img src="assets/img/illu-annee.webp" width="1400" height="933" alt="Illustration : des parents de l'APE en tablier devant l'école, entourés d'enfants qui jouent.">
+          </figure>
+          <figure class="c-crepes">
+            <img src="assets/img/crepes.webp" width="1050" height="1400" alt="Une pile de crêpes faites maison pour le Carna'bal.">
+          </figure>
+          <div class="next-card" id="hero-next" hidden></div>
         </div>
       </div>
     </section>
 
     <!-- Qui sommes-nous -->
-    <section class="about" id="qui">
+    <section id="qui">
       <div class="wrap">
-        <div class="section-head" style="margin:0">
+        <div class="section-head">
           <h2>Des parents qui font vivre l'école avec les enfants</h2>
-          <p>L'APE de Savigny-sur-Braye, c'est une équipe de parents bénévoles. Notre idée est simple : aider les écoles de la commune à réaliser leurs projets, et créer des moments où enfants, familles et équipes enseignantes se retrouvent.</p>
+          <p>L'APE de Savigny-sur-Braye aide les écoles de la commune à réaliser leurs projets, et crée des moments où enfants, familles et équipes enseignantes se retrouvent.</p>
         </div>
-        <div class="facts">
-          <div class="fact">
-            <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#fff"/><path d="M10 34 24 12l14 22z" fill="#5a3c93"/><rect x="20" y="26" width="8" height="8" fill="#ffc93f"/></svg>
-            Une école maternelle et une école élémentaire
+        <div class="pillars">
+          <div class="pillar">
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 4l9 6.5"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-5h4v5"/></svg></div>
+            <h3>Deux écoles, une même équipe</h3>
+            <p>Nous soutenons l'école maternelle et l'école élémentaire de la commune.</p>
           </div>
-          <div class="fact">
-            <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#fff"/><path d="M24 36S11 28 11 19a7 7 0 0 1 13-3.5A7 7 0 0 1 37 19c0 9-13 17-13 17z" fill="#f2765f"/></svg>
-            Des parents bénévoles, et la porte ouverte à tous
+          <div class="pillar">
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></div>
+            <h3>Des bénévoles, la porte ouverte</h3>
+            <p>Chaque parent peut donner un peu de temps, selon ses envies et ses disponibilités.</p>
           </div>
-          <div class="fact">
-            <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#fff"/><path d="m24 9 4.6 9.6 10.4 1.4-7.6 7.3 1.9 10.4L24 32.6 14.7 38l1.9-10.4L9 20.3l10.4-1.7z" fill="#ffc93f" stroke="#2b1f3d" stroke-width="2" stroke-linejoin="round"/></svg>
-            Une aide financière pour les projets des écoles
+          <div class="pillar">
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l2.5 5.3 5.8.8-4.2 4 1 5.8L12 16.7 6.9 19.4l1-5.8-4.2-4 5.8-.8z"/></svg></div>
+            <h3>Une aide pour les projets</h3>
+            <p>Les ventes et les fêtes financent des sorties, des séjours et des moments partagés.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Le train de l'année -->
-    <section class="year" id="annee">
+    <!-- Nos projets -->
+    <section class="projects" id="projets">
       <div class="wrap">
         <div class="section-head">
           <h2>Une année avec l'APE</h2>
-          <p>Chaque vente et chaque fête finance un projet pour les écoliers. Voici le trajet d'une année scolaire.</p>
+          <p>Chaque vente et chaque fête finance un projet pour les écoliers. Voici le rythme d'une année scolaire.</p>
         </div>
 
-        <ol class="line">
-          <li class="stop">
-            <p class="when">Octobre à novembre</p>
-            <div class="body">
-              <h3>Sapins et ventes gourmandes</h3>
-              <p>Commandes de sapins de Noël, livrés sur le parking de l'école, de brioches, de compotes, de fromages. De quoi préparer les fêtes en soutenant les projets des enfants.</p>
-            </div>
-          </li>
-          <li class="stop">
-            <p class="when">Décembre</p>
-            <div class="body">
-              <h3>Le marché de Noël</h3>
-              <p>Un stand de crêpes, gâteaux et quiches, un concours de poèmes illustrés tiré au sort par le Père Noël, et le petit train décoré avec les enfants pour une balade dans la commune.</p>
-            </div>
-          </li>
-          <li class="stop">
-            <p class="when">Mars</p>
-            <div class="body">
-              <h3>Le Carna'bal des crêpes</h3>
-              <p>Une soirée déguisée, avec DJ, karaoké et crêpes, ouverte aux enfants, aux parents, aux grands-parents et aux voisins. Elle rappelle le « bal des crêpes » des anciens parents d'élèves.</p>
-            </div>
-          </li>
-          <li class="stop">
-            <p class="when">Mars à avril</p>
-            <div class="body">
-              <h3>Les ventes du printemps</h3>
-              <p>Saucissons et fromages d'Auvergne, pour garnir les planches d'apéro des beaux jours.</p>
-            </div>
-          </li>
-          <li class="stop">
-            <p class="when">Mai</p>
-            <div class="body">
-              <h3>La fête du jeu</h3>
-              <p>Une soirée de jeux dans la commune, où l'APE tient la buvette et la restauration.</p>
-            </div>
-          </li>
-          <li class="stop">
-            <p class="when">Juin</p>
-            <div class="body">
-              <h3>La kermesse de fin d'année</h3>
-              <p>Au parc des loisirs, des stands de jeux, une tombola, des déguisements à thème et un repas le soir. Les élèves finissent l'année en fête. Quelques jours plus tôt, l'APE participe à la fête des associations de Savigny.</p>
-            </div>
-          </li>
-        </ol>
+        <div class="bento">
+          <article class="tile t1">
+            <img src="assets/img/sapins-pile.webp" width="1400" height="1050" alt="Des sapins de Noël emballés, prêts à être récupérés par les familles." loading="lazy">
+            <span class="when">Octobre à novembre</span>
+            <h3>Sapins et ventes gourmandes</h3>
+            <p>Sapins de Noël livrés sur le parking de l'école, brioches, compotes et fromages : de quoi préparer les fêtes en soutenant les projets des enfants.</p>
+          </article>
+          <article class="tile t2">
+            <img src="assets/img/pere-noel-train.webp" width="1050" height="1400" alt="Le Père Noël assis dans le petit train du marché de Noël." loading="lazy">
+            <span class="when">Décembre</span>
+            <h3>Le marché de Noël</h3>
+            <p>Un stand de crêpes, gâteaux et quiches, un concours de poèmes illustrés tiré au sort par le Père Noël, et la balade en petit train pour les enfants.</p>
+          </article>
+          <article class="tile t3">
+            <img src="assets/img/crepes.webp" width="1050" height="1400" alt="Des crêpes empilées, préparées pour le Carna'bal." loading="lazy" style="object-position:50% 70%">
+            <span class="when">Mars</span>
+            <h3>Le Carna'bal des crêpes</h3>
+            <p>Une soirée déguisée avec DJ, karaoké et crêpes, ouverte à tous.</p>
+          </article>
+          <article class="tile t4">
+            <img src="assets/img/illu-merci.webp" width="1400" height="933" alt="Illustration : une famille et un parent bénévole de l'APE qui présente un gâteau." loading="lazy" style="object-position:55% 40%">
+            <span class="when">Mars à avril</span>
+            <h3>Les ventes du printemps</h3>
+            <p>Saucissons et fromages d'Auvergne, pour les apéros des beaux jours.</p>
+          </article>
+          <article class="tile tile--plain t5">
+            <span class="when">Mai</span>
+            <h3>La fête du jeu</h3>
+            <p>Une soirée de jeux dans la commune, où l'APE tient la buvette et la restauration.</p>
+          </article>
+          <article class="tile t6">
+            <img src="assets/img/illu-vacances.webp" width="1080" height="1006" alt="Illustration : des enfants qui sautent de joie sur une plage, « c'est les vacances ! »." loading="lazy" style="object-position:50% 35%">
+            <span class="when">Juin</span>
+            <h3>La kermesse de fin d'année</h3>
+            <p>Au parc des loisirs, des stands de jeux, une tombola, un repas le soir : les élèves finissent l'année en fête. Quelques jours plus tôt, l'APE est aussi à la fête des associations.</p>
+          </article>
+        </div>
 
-        <p class="year-note">Ce calendrier est celui des dernières années. Les dates exactes changent chaque année : retrouvez-les sur <a href="https://www.facebook.com/apesavigny/" rel="noopener">notre page Facebook</a>.</p>
+        <p class="year-note">Ce calendrier est celui des dernières années : les dates exactes changent chaque année. Retrouvez-les sur <a href="https://www.facebook.com/apesavigny/" rel="noopener">notre page Facebook</a>.</p>
       </div>
     </section>
 
     <!-- Pour les enfants -->
     <section class="kids" id="enfants">
       <div class="wrap">
-        <div class="section-head">
+        <figure>
+          <img src="assets/img/illu-rentree.webp" width="933" height="1400" alt="Illustration : l'école du village sous la neige, avec des enfants qui jouent dans la cour." loading="lazy">
+        </figure>
+        <div>
           <h2>Pour que chaque enfant vive pleinement son école</h2>
-          <p>Ce que l'APE rend possible, pour les enfants comme pour leurs familles.</p>
+          <ul>
+            <li>
+              <h3>Partir, sans que le prix décide</h3>
+              <p>La classe de neige des CM2, les séjours de juin en élémentaire, les sorties scolaires : l'argent récolté par l'APE aide à les financer. Sans cette aide, beaucoup de sorties seraient remises en cause et la facture des familles augmenterait.</p>
+            </li>
+            <li>
+              <h3>Finir l'année en fête</h3>
+              <p>La kermesse, le carnaval, le marché de Noël : des jeux, des déguisements, le Père Noël en petit train. Des moments dont les enfants se souviennent.</p>
+            </li>
+            <li>
+              <h3>Se retrouver</h3>
+              <p>Parents, grands-parents, voisins, équipes enseignantes : nos soirées sont ouvertes à toutes et tous, à un prix accessible.</p>
+            </li>
+          </ul>
         </div>
-        <div class="grid">
-          <article class="kid-card">
-            <h3>Partir, sans que le prix décide</h3>
-            <p>La classe de neige des CM2, les séjours de juin en élémentaire, les sorties scolaires : l'argent récolté par l'APE aide à les financer. Sans cette aide, beaucoup de sorties seraient remises en cause et la facture des familles augmenterait.</p>
-          </article>
-          <article class="kid-card">
-            <h3>Finir l'année en fête</h3>
-            <p>La kermesse, le carnaval, le marché de Noël : des jeux, des déguisements, le Père Noël en petit train. Des moments dont les enfants se souviennent.</p>
-          </article>
-          <article class="kid-card">
-            <h3>Se retrouver</h3>
-            <p>Parents, grands-parents, voisins, équipes enseignantes : nos soirées sont ouvertes à toutes et tous, et à un prix accessible.</p>
-          </article>
+      </div>
+    </section>
+
+    <!-- En images -->
+    <section class="gallery" aria-labelledby="gallery-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="gallery-title">L'APE en images</h2>
+          <p>Des sapins à charger, des crêpes à retourner, des stands à installer : un projet d'enfant, c'est beaucoup de mains.</p>
+        </div>
+        <div class="mosaic">
+          <figure><img src="assets/img/benevoles-stand.webp" width="1400" height="1050" loading="lazy" alt="Quatre bénévoles de l'APE en tablier et bonnet de Noël derrière le stand du marché."></figure>
+          <figure><img src="assets/img/sapins-camion.webp" width="1050" height="1400" loading="lazy" alt="Un camion chargé de sapins de Noël, livrés pour la vente de l'APE."></figure>
+          <figure><img src="assets/img/stand-marche.webp" width="1400" height="1050" loading="lazy" alt="Le stand de l'APE au marché de Noël, décoré de guirlandes et garni de gourmandises."></figure>
+          <figure><img src="assets/img/illu-noel.webp" width="1400" height="933" loading="lazy" alt="Carte de vœux illustrée : le Père Noël souhaite un joyeux Noël aux écoliers de Savigny."></figure>
+          <figure><img src="assets/img/muffins.webp" width="1400" height="1050" loading="lazy" alt="Des muffins au chocolat faits maison pour les ventes de l'APE."></figure>
+          <figure><img src="assets/img/brioches-quiches.webp" width="1400" height="1050" loading="lazy" alt="Des quiches et des brioches proposées sur le stand."></figure>
         </div>
       </div>
     </section>
@@ -224,13 +192,13 @@
       <div class="wrap">
         <div>
           <h2>Rejoignez l'APE</h2>
-          <p style="margin-top:1rem">L'association a besoin de nouveaux bénévoles cette année. Chacun donne le temps qu'il peut, et on s'amuse bien ensemble.</p>
+          <p class="lead">L'association a besoin de nouveaux bénévoles cette année. Chacun donne le temps qu'il peut, et on s'amuse bien ensemble.</p>
           <ul>
             <li>Venir à une réunion pour voir comment ça se passe.</li>
             <li>Donner un coup de main sur un stand ou pour préparer une fête.</li>
             <li>Proposer une idée de projet pour les enfants.</li>
           </ul>
-          <a class="btn" href="https://www.facebook.com/apesavigny/" rel="noopener">Nous écrire sur Facebook</a>
+          <a class="btn btn--light" href="https://www.facebook.com/apesavigny/" rel="noopener">Nous écrire sur Facebook</a>
         </div>
 
         <aside class="meeting" aria-labelledby="meeting-title">
@@ -248,16 +216,16 @@
         <div class="section-head" style="margin:0">
           <h2>Une question ? Écrivez-nous</h2>
           <p>Le plus rapide est un message sur Facebook : c'est aussi là que nous annonçons les ventes, les fêtes et les dates à retenir.</p>
-          <p style="font-size:var(--step--1); margin-top:1rem">Les membres du bureau changent d'une année à l'autre. Ces coordonnées, elles, restent les mêmes.</p>
+          <p class="contact-note">Les membres du bureau changent d'une année à l'autre. Ces coordonnées, elles, restent les mêmes.</p>
         </div>
-        <div class="contact-list">
-          <a class="btn" href="https://www.facebook.com/apesavigny/" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 22v-8h2.7l.5-3.3h-3.2V8.6c0-.9.4-1.7 1.8-1.7h1.5V4.1S15.5 3.9 14.3 3.9c-2.6 0-4.3 1.6-4.3 4.4v2.4H7.2V14H10v8z"/></svg>
-            Notre page Facebook
+        <div class="contact-links">
+          <a class="contact-link" href="https://www.facebook.com/apesavigny/" rel="noopener">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 22v-8h2.7l.5-3.3h-3.2V8.6c0-.9.4-1.7 1.8-1.7h1.5V4.1S15.5 3.9 14.3 3.9c-2.6 0-4.3 1.6-4.3 4.4v2.4H7.2V14H10v8z"/></svg></span>
+            <span>Notre page Facebook<small>Actualités, ventes et dates</small></span>
           </a>
-          <a class="btn btn--ghost" href="mailto:savigny.ape@gmail.com">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" d="M3 6h18v12H3zM3 7l9 7 9-7"/></svg>
-            savigny.ape@gmail.com
+          <a class="contact-link" href="mailto:savigny.ape@gmail.com">
+            <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="m4 7.5 8 6 8-6"/></svg></span>
+            <span>savigny.ape@gmail.com<small>Pour toute question</small></span>
           </a>
         </div>
       </div>
