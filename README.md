@@ -13,7 +13,7 @@ Site statique (HTML, CSS, un peu de JavaScript). Pas de build, pas de dépendanc
 
 1. Dépôt GitHub public, puis **Settings > Pages > Deploy from a branch > `main` / `(root)`**.
 2. Avant le domaine, le site est visible sur `https://<compte>.github.io/<dépôt>/`.
-3. Le fichier `CNAME` contient `ape-savigny.fr`. Dans **Settings > Pages > Custom domain**, saisir `ape-savigny.fr`, puis cocher **Enforce HTTPS** quand c'est possible.
+3. Quand le DNS OVH est prêt : créer un fichier `CNAME` à la racine contenant `ape-savigny.fr` (il est volontairement absent pour que le lien de prévisualisation fonctionne). Dans **Settings > Pages > Custom domain**, saisir `ape-savigny.fr`, puis cocher **Enforce HTTPS** quand c'est possible.
 
 ## Domaine chez OVH (zone DNS)
 
