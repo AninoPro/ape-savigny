@@ -34,4 +34,4 @@ La propagation prend de quelques minutes à quelques heures. Vérifier les IP su
 - Le calendrier « Une année avec l'APE » est tiré des publications Facebook des dernières années : confirmer les mois.
 - Photos (`assets/img/`) : issues de la page Facebook de l'APE. Aucun gros plan d'enfant n'a été retenu. Ajouter des photos d'enfants uniquement avec autorisation écrite des représentants légaux. Les images sont en WebP, 1400 px max : convertir de la même façon pour en ajouter.
 - Les quatre bénévoles du stand (`benevoles-stand.webp`) sont reconnaissables : à confirmer avec elles et eux, sinon retirer l'image (index.html, section « L'APE en images »).
-- Mentions légales (`mentions-legales.html`) : compléter les champs surlignés en jaune (siège, RNA/SIREN, téléphone, nom du ou de la président(e), date), puis retirer la classe `todo`. À mettre à jour à chaque changement de bureau.
+- Mentions légales (`mentions-legales.html`) : à mettre à jour après l'élection du bureau (directeur ou directrice de la publication = président(e) en exercice) et à chaque changement de siège, de téléphone ou d'hébergeur.
