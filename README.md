@@ -4,7 +4,7 @@ Site statique (HTML, CSS, un peu de JavaScript). Pas de build, pas de dépendanc
 
 ## Modifier le site
 
-- **Ajouter une réunion ou un événement** : `data/agenda.js`. Les dates passées disparaissent seules.
+- **Mettre à jour l'agenda** (section « Prochains rendez-vous », carte d'accueil, carte « Rejoindre ») : uniquement `data/agenda.js`. Copier un bloc, changer la date, le titre, le lieu. Les dates passées disparaissent seules, et sans rendez-vous futur la section renvoie vers Facebook.
 - **Changer un texte** : `index.html`. Chaque section est commentée.
 - **Couleurs et polices** : variables en haut de `assets/css/style.css`.
 - **Tester en local** : `python3 -m http.server 8000` puis ouvrir http://localhost:8000.
