@@ -1,4 +1,5 @@
-// L'équipe de l'APE : page equipe.html. C'est le seul fichier à modifier pour la mettre à jour.
+// L'équipe de l'APE : section « L'équipe » de l'accueil (portraits) et son tiroir (fiches détaillées).
+// C'est le seul fichier à modifier pour la mettre à jour.
 //
 // Photos : rangez-les dans photos/equipe/ puis lancez  python3 scripts/photos.py
 //   - photo de groupe   : photos/equipe/2026-2027.jpg     -> assets/img/equipe/groupe-2026-2027.webp
@@ -22,6 +23,20 @@ window.APE_EQUIPE = {
   photoGroupe: "groupe-2026-2027",
   photoGroupeTexte: "Les bénévoles de l'APE pour l'année 2026-2027, réunis pour une photo de groupe.",
   membres: [
+    { prenom: "Valérie", role: "Présidente" },
+    { prenom: "Cassandre", role: "Vice-présidente" },
+    { prenom: "Thomas", role: "Trésorier", metier: "Développeur", enfants: "Papa d'un enfant en petite section, dans la classe de Marianne et Romy" },
+    { prenom: "Edith", role: "Vice-trésorière" },
+    { prenom: "Adeline", nom: "G.", role: "Secrétaire" },
+    { prenom: "Adeline", nom: "R.", role: "Vice-secrétaire", metier: "Auto-entrepreneuse", enfants: "Maman d'un enfant en petite section" },
+    { prenom: "Céline", role: "Membre", metier: "Animatrice d'ateliers de développement personnel", enfants: "Maman de trois enfants : un en grande section, un en moyenne section et un petit de 2 ans" },
+    { prenom: "Alexia", role: "Membre", metier: "Agricultrice" },
+    { prenom: "Hind", role: "Membre", metier: "Mère au foyer", enfants: "Maman d'un enfant en petite section, dans la classe de Camille" },
+    { prenom: "Cassandra", role: "Membre", metier: "Technicienne de laboratoire" },
+    { prenom: "Laura", role: "Membre", metier: "Assistante manager", enfants: "Maman d'un enfant en moyenne section" },
+    { prenom: "Manon", role: "Membre", enfants: "Maman de deux enfants, en grande section et en petite section" },
+    { prenom: "Bénédicte", role: "Membre", enfants: "Maman d'un enfant en moyenne section" },
+
     // Exemple à copier (sans les // au début des lignes) :
     // {
     //   prenom: "Julie",

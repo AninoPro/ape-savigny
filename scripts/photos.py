@@ -13,7 +13,7 @@ Le script :
      WebP de 1400 px max (NN.webp) et une miniature de 640 px (NN-mini.webp) ;
   3. affiche un bloc prêt à coller dans data/albums.js pour chaque nouvel album.
 
-Le dossier photos/equipe/ est à part (page equipe.html, data/equipe.js) :
+Le dossier photos/equipe/ est à part (section « L'équipe », data/equipe.js) :
   photos/equipe/2026-2027.jpg      -> assets/img/equipe/groupe-2026-2027.webp (photo de groupe)
   photos/equipe/membres/Julie.jpg  -> assets/img/equipe/julie.webp (portrait)
 

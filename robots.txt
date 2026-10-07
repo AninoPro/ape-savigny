@@ -1,0 +1,4 @@
+# Les noms et portraits des bénévoles (section « L'équipe ») ne doivent pas apparaître dans les moteurs de recherche.
+User-agent: *
+Disallow: /data/equipe.js
+Disallow: /assets/img/equipe/

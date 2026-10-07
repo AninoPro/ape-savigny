@@ -262,21 +262,13 @@
   }
 })();
 
-// Page équipe : photo de groupe et portraits de data/equipe.js (et la carte « L'équipe » de l'accueil)
+// L'équipe (data/equipe.js) : photo de groupe et portraits dans « Qui sommes-nous »,
+// fiches détaillées dans un tiroir. Le bouton retour du téléphone ferme le tiroir.
+// Liens directs : #equipe-complete (toute l'équipe) ou #equipe-<prénom>[-<nom>] (une fiche).
 (function () {
   var team = window.APE_EQUIPE;
-  if (!team) return;
-
-  var teaserYear = document.getElementById("teaser-year");
-  var teaserImg = document.getElementById("teaser-img");
-  if (teaserYear && team.annee) teaserYear.textContent = "L'équipe " + team.annee;
-  if (teaserImg && team.photoGroupe) {
-    teaserImg.src = "assets/img/equipe/" + team.photoGroupe + ".webp";
-    teaserImg.alt = team.photoGroupeTexte || "";
-  }
-
-  var list = document.getElementById("members-list");
-  if (!list) return;
+  var drawer = document.getElementById("team-drawer");
+  if (!team || !drawer) return;
 
   function el(tag, cls, text) {
     var n = document.createElement(tag);
@@ -284,47 +276,107 @@
     if (text) n.textContent = text;
     return n;
   }
-
-  if (team.annee) {
-    document.getElementById("team-year").textContent = team.annee;
-    document.title = "L'équipe " + team.annee + " – APE de Savigny-sur-Braye";
+  function slug(m) {
+    return [m.prenom, m.nom].filter(Boolean).join(" ").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   }
-  var group = document.getElementById("team-group");
-  if (team.photoGroupe) {
-    var g = group.querySelector("img");
-    g.src = "assets/img/equipe/" + team.photoGroupe + ".webp";
-    g.alt = team.photoGroupeTexte || "";
-  } else group.remove();
-
-  var members = (team.membres || []).filter(function (m) { return m && m.prenom; });
-  document.getElementById("members-empty").hidden = members.length > 0;
-
-  members.forEach(function (m) {
-    var name = [m.prenom, m.nom].filter(Boolean).join(" ");
-    var li = el("li", "member");
-    var pic = el("div", "member-photo");
+  function fullName(m) { return [m.prenom, m.nom].filter(Boolean).join(" "); }
+  function portrait(m, cls) {
+    var pic = el("span", cls);
     if (m.photo) {
       var img = el("img");
       img.src = "assets/img/equipe/" + m.photo + ".webp";
-      img.alt = "Portrait de " + name + ".";
+      img.alt = "";
       img.loading = "lazy";
       pic.appendChild(img);
     } else {
-      var initials = el("span", "", (m.prenom.charAt(0) + (m.nom ? m.nom.charAt(0) : "")).toUpperCase());
-      initials.setAttribute("aria-hidden", "true");
-      pic.appendChild(initials);
+      pic.textContent = (m.prenom.charAt(0) + (m.nom ? m.nom.charAt(0) : "")).toUpperCase();
     }
-    li.appendChild(pic);
-    if (m.role) li.appendChild(el("p", "member-role", m.role));
-    li.appendChild(el("h3", "", name));
+    pic.setAttribute("aria-hidden", "true");
+    return pic;
+  }
+
+  var title = team.annee ? "L'équipe " + team.annee : "L'équipe";
+  document.getElementById("team-title").textContent = title;
+  document.getElementById("drawer-title").textContent = title;
+  var group = document.getElementById("team-group-img");
+  if (team.photoGroupe) {
+    group.src = "assets/img/equipe/" + team.photoGroupe + ".webp";
+    group.alt = team.photoGroupeTexte || "";
+  } else group.closest("figure").remove();
+
+  var members = (team.membres || []).filter(function (m) { return m && m.prenom; });
+  if (!members.length) return;
+
+  // Portraits dans la page : prénom et rôle
+  var roster = document.getElementById("team-roster");
+  var more = document.getElementById("team-more");
+  members.forEach(function (m) {
+    var li = el("li");
+    var b = el("button", "roster-item");
+    b.type = "button";
+    b.appendChild(portrait(m, "roster-photo"));
+    b.appendChild(el("strong", "", fullName(m)));
+    if (m.role) b.appendChild(el("span", "", m.role));
+    b.setAttribute("aria-label", fullName(m) + (m.role ? ", " + m.role : "") + " : voir sa présentation");
+    b.addEventListener("click", function () { open(slug(m)); });
+    li.appendChild(b);
+    roster.appendChild(li);
+  });
+  roster.hidden = false;
+  more.hidden = false;
+  document.getElementById("team-ask").hidden = false;
+  more.addEventListener("click", function () { open("complete"); });
+
+  // Fiches détaillées dans le tiroir
+  var list = document.getElementById("members-list");
+  members.forEach(function (m) {
+    var li = el("li", "member");
+    li.id = "membre-" + slug(m);
+    li.tabIndex = -1;
+    li.appendChild(portrait(m, "member-photo"));
+    var body = el("div", "member-body");
+    if (m.role) body.appendChild(el("p", "member-role", m.role));
+    body.appendChild(el("h3", "", fullName(m)));
     var facts = el("dl", "member-facts");
     [["Dans la vie", m.metier], ["À l'école", m.enfants]].forEach(function (f) {
       if (!f[1]) return;
       facts.appendChild(el("dt", "", f[0]));
       facts.appendChild(el("dd", "", f[1]));
     });
-    if (facts.children.length) li.appendChild(facts);
-    if (m.presentation) li.appendChild(el("p", "member-text", m.presentation));
+    if (facts.children.length) body.appendChild(facts);
+    if (m.presentation) body.appendChild(el("p", "member-text", m.presentation));
+    li.appendChild(body);
     list.appendChild(li);
   });
+
+  var opener = null;
+  function open(target) {
+    if (!drawer.open) {
+      opener = document.activeElement;
+      history.pushState({ drawer: true }, "", "#equipe-" + target);
+      drawer.showModal();
+    }
+    var card = document.getElementById("membre-" + target);
+    if (card) {
+      card.scrollIntoView({ block: "start" });
+      card.focus({ preventScroll: true });
+    } else drawer.querySelector(".members").scrollTop = 0;
+  }
+
+  drawer.querySelector(".drawer-close").addEventListener("click", function () { drawer.close(); });
+  drawer.addEventListener("click", function (e) { if (e.target === drawer) drawer.close(); });
+  drawer.addEventListener("close", function () {
+    if (history.state && history.state.drawer) history.back();
+    if (opener && opener.focus) opener.focus();
+  });
+  window.addEventListener("popstate", function () {
+    if (drawer.open && !(history.state && history.state.drawer)) drawer.close();
+  });
+
+  var m = location.hash.match(/^#equipe-(.+)$/);
+  if (m) {
+    history.replaceState(null, "", "#equipe");
+    document.getElementById("equipe").scrollIntoView();
+    open(decodeURIComponent(m[1]));
+  }
 })();

@@ -31,7 +31,7 @@
         <a href="#agenda">Agenda</a>
         <a href="#projets">Nos projets</a>
         <a href="#enfants">Pour les enfants</a>
-        <a href="equipe.html">L'équipe</a>
+        <a href="#equipe">L'équipe</a>
         <a href="#contact">Contact</a>
         <a class="btn" href="#rejoindre">Nous rejoindre</a>
       </nav>
@@ -105,14 +105,18 @@
             <p>Les ventes et les fêtes financent des sorties, des séjours et des moments partagés.</p>
           </div>
         </div>
-        <a class="team-teaser" href="equipe.html">
-          <img id="teaser-img" src="assets/img/equipe/groupe-2026-2027.webp" width="1400" height="1050" loading="lazy" alt="Les bénévoles de l'APE pour l'année 2026-2027, réunis pour une photo de groupe.">
-          <span class="team-teaser-text">
-            <strong id="teaser-year">L'équipe 2026-2027</strong>
-            <span>Qui sont les parents derrière l'APE, et qui fait quoi.</span>
-            <span class="link-arrow">Découvrir l'équipe <span aria-hidden="true">→</span></span>
-          </span>
-        </a>
+        <!-- L'équipe : à modifier dans data/equipe.js -->
+        <div class="team" id="equipe">
+          <figure class="team-group">
+            <img id="team-group-img" src="assets/img/equipe/groupe-2026-2027.webp" width="1400" height="1050" loading="lazy" alt="Les bénévoles de l'APE pour l'année 2026-2027, réunis pour une photo de groupe.">
+          </figure>
+          <div class="team-intro">
+            <h3 id="team-title">L'équipe 2026-2027</h3>
+            <p>Des parents d'élèves bénévoles, élus chaque année en assemblée générale.<span id="team-ask" hidden> Une question sur une vente, une fête ou un projet ? Voici à qui vous adresser.</span></p>
+          </div>
+          <ul class="roster" id="team-roster" hidden></ul>
+          <button class="link-arrow team-more" id="team-more" type="button" hidden>Découvrir toute l'équipe <span aria-hidden="true">→</span></button>
+        </div>
       </div>
     </section>
 
@@ -231,6 +235,15 @@
         <button class="viewer-nav viewer-next" type="button" aria-label="Photo suivante"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
       </figure>
       <ol class="viewer-strip" id="viewer-strip" aria-label="Toutes les photos de l'album"></ol>
+    </dialog>
+
+    <!-- Tiroir de l'équipe (rempli par assets/js/main.js depuis data/equipe.js) -->
+    <dialog class="drawer" id="team-drawer" aria-labelledby="drawer-title">
+      <div class="drawer-head">
+        <h2 id="drawer-title">L'équipe</h2>
+        <button class="drawer-close" type="button" aria-label="Fermer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <ul class="members" id="members-list"></ul>
     </dialog>
 
     <!-- Rejoindre -->
