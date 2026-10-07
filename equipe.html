@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>L'équipe – APE de Savigny-sur-Braye</title>
+  <meta name="description" content="Les parents bénévoles de l'APE de Savigny-sur-Braye : qui fait quoi au sein de l'association.">
+  <!-- Page avec des noms et des photos de bénévoles : on évite qu'elle remonte dans les moteurs de recherche -->
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#5b3fd1">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="APE de Savigny-sur-Braye, retour à l'accueil">
+        <b>APE</b>
+        <span>Savigny-sur-Braye</span>
+      </a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="index.html#agenda">Agenda</a>
+        <a href="index.html#projets">Nos projets</a>
+        <a href="equipe.html" aria-current="page">L'équipe</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="btn" href="index.html#rejoindre">Nous rejoindre</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <!-- Présentation et photo de groupe : à modifier dans data/equipe.js -->
+    <section class="team-hero">
+      <div class="wrap">
+        <div class="section-head">
+          <h1>L'équipe <span id="team-year">2026-2027</span></h1>
+          <p>Des parents d'élèves bénévoles, élus chaque année en assemblée générale. Ils organisent les ventes et les fêtes, et font le lien avec les écoles.</p>
+        </div>
+        <figure class="team-group" id="team-group">
+          <img src="assets/img/equipe/groupe-2026-2027.webp" width="1400" height="1050" alt="Les bénévoles de l'APE pour l'année 2026-2027, réunis pour une photo de groupe.">
+        </figure>
+      </div>
+    </section>
+
+    <!-- Portraits : à remplir dans data/equipe.js -->
+    <section class="team-members" aria-labelledby="members-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="members-title">Qui fait quoi</h2>
+          <p>Une question sur une vente, une fête ou un projet ? Voici à qui vous adresser.</p>
+        </div>
+        <ul class="members" id="members-list"></ul>
+        <p class="members-empty" id="members-empty">Les portraits de chaque membre arrivent bientôt. En attendant, toute l'équipe vous répond sur <a href="https://www.facebook.com/apesavigny/" rel="noopener">notre page Facebook</a> ou à <a href="mailto:savigny.ape@gmail.com">savigny.ape@gmail.com</a>.</p>
+      </div>
+    </section>
+
+    <section class="team-join">
+      <div class="wrap">
+        <div>
+          <h2>Et pourquoi pas vous ?</h2>
+          <p>Pas besoin d'être au bureau pour participer : chaque parent peut donner un peu de temps, selon ses envies.</p>
+        </div>
+        <a class="btn btn--light" href="index.html#rejoindre">Rejoindre l'APE</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© APE de Savigny-sur-Braye, association de parents d'élèves</p>
+      <p>Ce site n'utilise ni cookies ni outil de suivi. <a href="mentions-legales.html">Mentions légales</a></p>
+    </div>
+  </footer>
+
+  <script src="data/equipe.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

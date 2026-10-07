@@ -1,6 +1,6 @@
 # Note de design
 
-**Objectif** : présenter l'APE (projets, lien avec l'école, bien-être des enfants), recruter des bénévoles, donner un contact simple. Aucun nom de membre du bureau (il change).
+**Objectif** : présenter l'APE (projets, lien avec l'école, bien-être des enfants), recruter des bénévoles, donner un contact simple. Les noms et portraits des membres sont réservés à la page `equipe.html` (pilotée par `data/equipe.js`, à mettre à jour à chaque élection du bureau), jamais dans le reste du site.
 
 **Idée** : un site clair et moderne, porté par les vraies photos et illustrations de l'APE. Wordmark « APE » avec une étiquette en forme de crayon, comme sur les tabliers.
 

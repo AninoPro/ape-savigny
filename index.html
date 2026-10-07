@@ -31,6 +31,7 @@
         <a href="#agenda">Agenda</a>
         <a href="#projets">Nos projets</a>
         <a href="#enfants">Pour les enfants</a>
+        <a href="equipe.html">L'équipe</a>
         <a href="#contact">Contact</a>
         <a class="btn" href="#rejoindre">Nous rejoindre</a>
       </nav>
@@ -104,55 +105,87 @@
             <p>Les ventes et les fêtes financent des sorties, des séjours et des moments partagés.</p>
           </div>
         </div>
+        <a class="team-teaser" href="equipe.html">
+          <img id="teaser-img" src="assets/img/equipe/groupe-2026-2027.webp" width="1400" height="1050" loading="lazy" alt="Les bénévoles de l'APE pour l'année 2026-2027, réunis pour une photo de groupe.">
+          <span class="team-teaser-text">
+            <strong id="teaser-year">L'équipe 2026-2027</strong>
+            <span>Qui sont les parents derrière l'APE, et qui fait quoi.</span>
+            <span class="link-arrow">Découvrir l'équipe <span aria-hidden="true">→</span></span>
+          </span>
+        </a>
       </div>
     </section>
 
-    <!-- Nos projets -->
-    <section class="projects" id="projets">
+    <!-- Nos projets : l'année de l'APE, avec les photos de chaque événement (albums dans data/albums.js) -->
+    <section class="projects" id="projets" aria-labelledby="projets-title">
       <div class="wrap">
         <div class="section-head">
-          <h2>Une année avec l'APE</h2>
-          <p>Chaque vente et chaque fête finance un projet pour les écoliers. Voici le rythme d'une année scolaire.</p>
+          <h2 id="projets-title">Une année avec l'APE</h2>
+          <p>Chaque vente et chaque fête finance un projet pour les écoliers. Voici le rythme d'une année scolaire, en photos.</p>
         </div>
 
-        <div class="bento">
-          <article class="tile t1">
-            <img src="assets/img/sapins-pile.webp" width="1400" height="1050" alt="Des sapins de Noël emballés, prêts à être récupérés par les familles." loading="lazy">
-            <span class="when">Octobre à novembre</span>
-            <h3>Sapins et ventes gourmandes</h3>
-            <p>Sapins de Noël livrés sur le parking de l'école, brioches, compotes et fromages : de quoi préparer les fêtes en soutenant les projets des enfants.</p>
-          </article>
-          <article class="tile t2">
-            <img src="assets/img/pere-noel-train.webp" width="1050" height="1400" alt="Le Père Noël assis dans le petit train du marché de Noël." loading="lazy">
-            <span class="when">Décembre</span>
-            <h3>Le marché de Noël</h3>
-            <p>Un stand de crêpes, gâteaux et quiches, un concours de poèmes illustrés tiré au sort par le Père Noël, et la balade en petit train pour les enfants.</p>
-          </article>
-          <article class="tile t3">
-            <img src="assets/img/carnabal-equipe.webp" width="1400" height="1050" alt="Des bénévoles de l'APE déguisés en cow-boys et en indiens, derrière les plaques à crêpes du Carna'bal." loading="lazy">
-            <span class="when">Mars</span>
-            <h3>Le Carna'bal des crêpes</h3>
-            <p>Une soirée déguisée avec DJ, karaoké et crêpes, ouverte à tous.</p>
-          </article>
-          <article class="tile tile--plain tile--lilac t4">
-            <span class="when">Mars à avril</span>
-            <h3>Les ventes du printemps</h3>
-            <p>Saucissons et fromages d'Auvergne, pour les apéros des beaux jours.</p>
-          </article>
-          <article class="tile tile--plain t5">
-            <span class="when">Mai</span>
-            <h3>La fête du jeu</h3>
-            <p>Une soirée de jeux dans la commune, où l'APE tient la buvette et la restauration.</p>
-          </article>
-          <article class="tile t6">
-            <img src="assets/img/kermesse-tipis.webp" width="1400" height="1050" alt="La kermesse au parc des loisirs, sur le thème du far west : des tipis blancs sur l'herbe, un château gonflable derrière les arbres." loading="lazy" style="object-position:50% 60%">
-            <span class="when">Juin</span>
-            <h3>La kermesse de fin d'année</h3>
-            <p>Au parc des loisirs, des stands de jeux, une tombola, un repas le soir : les élèves finissent l'année en fête. Quelques jours plus tôt, l'APE est aussi à la fête des associations.</p>
-          </article>
-        </div>
+        <ol class="year">
+          <li class="moment" data-album="vente-sapins">
+            <p class="moment-when">Octobre à novembre</p>
+            <div class="moment-text">
+              <h3>Sapins et ventes gourmandes</h3>
+              <p>Sapins de Noël livrés sur le parking de l'école, brioches, compotes et fromages : de quoi préparer les fêtes en soutenant les projets des enfants.</p>
+            </div>
+            <div class="moment-photos"></div>
+          </li>
+          <li class="moment" data-album="marche-noel">
+            <p class="moment-when">Décembre</p>
+            <div class="moment-text">
+              <h3>Le marché de Noël</h3>
+              <p>Un stand de crêpes, gâteaux et quiches, un concours de poèmes illustrés tiré au sort par le Père Noël, et la balade en petit train pour les enfants.</p>
+            </div>
+            <div class="moment-photos"></div>
+          </li>
+          <li class="moment" data-album="classe-neige">
+            <p class="moment-when">En hiver</p>
+            <div class="moment-text">
+              <h3>La classe de neige des CM2</h3>
+              <p>L'APE aide à financer le séjour, et les parents accueillent les CM2 à leur retour autour d'un buffet.</p>
+            </div>
+            <div class="moment-photos"></div>
+          </li>
+          <li class="moment" data-album="carnabal">
+            <p class="moment-when">Mars</p>
+            <div class="moment-text">
+              <h3>Le Carna'bal des crêpes</h3>
+              <p>Une soirée déguisée avec DJ, karaoké et crêpes, ouverte à tous.</p>
+            </div>
+            <div class="moment-photos">
+              <img src="assets/img/carnabal-equipe.webp" width="1400" height="1050" alt="Des bénévoles de l'APE déguisés en cow-boys et en indiens, derrière les plaques à crêpes du Carna'bal." loading="lazy">
+            </div>
+          </li>
+          <li class="moment" data-album="ventes-printemps">
+            <p class="moment-when">Mars à avril</p>
+            <div class="moment-text">
+              <h3>Les ventes du printemps</h3>
+              <p>Saucissons et fromages d'Auvergne, pour les apéros des beaux jours.</p>
+            </div>
+            <div class="moment-photos"></div>
+          </li>
+          <li class="moment" data-album="fete-du-jeu">
+            <p class="moment-when">Mai</p>
+            <div class="moment-text">
+              <h3>La fête du jeu</h3>
+              <p>Une soirée de jeux dans la commune, où l'APE tient la buvette et la restauration.</p>
+            </div>
+            <div class="moment-photos"></div>
+          </li>
+          <li class="moment" data-album="kermesse">
+            <p class="moment-when">Juin</p>
+            <div class="moment-text">
+              <h3>La kermesse de fin d'année</h3>
+              <p>Au parc des loisirs, des stands de jeux, une tombola, un repas le soir : les élèves finissent l'année en fête. Quelques jours plus tôt, l'APE est aussi à la fête des associations.</p>
+            </div>
+            <div class="moment-photos"></div>
+          </li>
+        </ol>
 
-        <p class="year-note">Ce calendrier est celui des dernières années : les dates exactes changent chaque année. Retrouvez-les sur <a href="https://www.facebook.com/apesavigny/" rel="noopener">notre page Facebook</a>.</p>
+        <p class="year-note">Ce calendrier est celui des dernières années : les dates exactes changent chaque année. Retrouvez-les, et plus de photos, sur <a href="https://www.facebook.com/apesavigny/" rel="noopener">notre page Facebook</a>.</p>
       </div>
     </section>
 
@@ -182,24 +215,23 @@
       </div>
     </section>
 
-    <!-- En images -->
-    <section class="gallery" aria-labelledby="gallery-title">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 id="gallery-title">L'APE en images</h2>
-          <p>Des sapins à charger, des crêpes à retourner, des stands à installer : un projet d'enfant, c'est beaucoup de mains.</p>
+    <!-- Visionneuse des photos (remplie par assets/js/main.js) -->
+    <dialog class="viewer" id="viewer" aria-labelledby="viewer-title">
+      <div class="viewer-head">
+        <div>
+          <h2 id="viewer-title"></h2>
+          <p class="viewer-meta" id="viewer-meta"></p>
         </div>
-        <div class="mosaic">
-          <figure><img src="assets/img/benevoles-stand.webp" width="1400" height="1050" loading="lazy" alt="Quatre bénévoles de l'APE en tablier et bonnet de Noël derrière le stand du marché."></figure>
-          <figure><img src="assets/img/sapins-camion.webp" width="1050" height="1400" loading="lazy" alt="Un camion chargé de sapins de Noël, livrés pour la vente de l'APE."></figure>
-          <figure><img src="assets/img/stand-marche.webp" width="1400" height="1050" loading="lazy" alt="Le stand de l'APE au marché de Noël, décoré de guirlandes et garni de gourmandises."></figure>
-          <figure><img src="assets/img/kermesse-saloon.webp" width="1400" height="1050" loading="lazy" alt="Le stand « Saloon » de la kermesse, décoré de fanions, avec des bénévoles derrière le comptoir en bois."></figure>
-          <figure><img src="assets/img/illu-noel.webp" width="1400" height="933" loading="lazy" alt="Carte de vœux illustrée : le Père Noël souhaite un joyeux Noël aux écoliers de Savigny."></figure>
-          <figure><img src="assets/img/muffins.webp" width="1400" height="1050" loading="lazy" alt="Des muffins au chocolat faits maison pour les ventes de l'APE."></figure>
-          <figure><img src="assets/img/brioches-quiches.webp" width="1400" height="1050" loading="lazy" alt="Des quiches et des brioches proposées sur le stand."></figure>
-        </div>
+        <button class="viewer-close" type="button" aria-label="Fermer l'album"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
       </div>
-    </section>
+      <figure class="viewer-stage">
+        <img id="viewer-img" alt="">
+        <figcaption id="viewer-caption"></figcaption>
+        <button class="viewer-nav viewer-prev" type="button" aria-label="Photo précédente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="viewer-nav viewer-next" type="button" aria-label="Photo suivante"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      </figure>
+      <ol class="viewer-strip" id="viewer-strip" aria-label="Toutes les photos de l'album"></ol>
+    </dialog>
 
     <!-- Rejoindre -->
     <section class="join" id="rejoindre">
@@ -254,6 +286,8 @@
   </footer>
 
   <script src="data/agenda.js"></script>
+  <script src="data/albums.js"></script>
+  <script src="data/equipe.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
