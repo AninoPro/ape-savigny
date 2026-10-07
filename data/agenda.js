@@ -5,14 +5,26 @@
 //   titre   : le nom du rendez-vous
 //   lieu    : où ça se passe (facultatif)
 //   details : une ou deux phrases (facultatif)
+//   etiquette : petite étiquette colorée au-dessus du titre (facultatif)
 //   lien    : adresse d'une page, par exemple l'événement Facebook (facultatif)
 //
 // Les rendez-vous passés disparaissent tout seuls. L'ordre n'a pas d'importance.
 window.APE_AGENDA = [
   {
-    date: "2026-10-06T20:00",
-    titre: "Réunion de l'APE",
-    lieu: "Salle des associations, Savigny-sur-Braye",
-    details: "Élection des nouveaux membres du bureau et organisation de l'année à venir. Tous les parents sont les bienvenus, y compris pour venir voir comment ça se passe."
+    date: "2026-10-12",
+    titre: "Distribution des flyers de commande",
+    etiquette: "Plus d'infos sur les choix bientôt !",
+    details: "Les flyers pour commander sapins et fromages sont distribués. Très bientôt, les choix et les prix seront aussi consultables sur ce site. Date limite de commande : 10 novembre."
+  },
+  {
+    date: "2026-11-10",
+    titre: "Date limite de commande",
+    details: "Dernier jour pour passer commande de sapins et de fromages."
+  },
+  {
+    date: "2026-12-04",
+    titre: "Livraison des sapins et fromages",
+    lieu: "Savigny-sur-Braye",
+    details: "Livraison des sapins de Noël et fromages commandés."
   }
 ];

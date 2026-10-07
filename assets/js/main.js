@@ -51,7 +51,8 @@
       badge.setAttribute("datetime", x.e.date);
       badge.appendChild(el("b", "", dayNum.format(x.d)));
       badge.appendChild(el("span", "", monthShort.format(x.d)));
-      var body = el("div", "event-body");
+      var body = el("div", "event-card");
+      if (x.e.etiquette) body.appendChild(el("span", "event-tag", x.e.etiquette));
       body.appendChild(el("h3", "", x.e.titre));
       var when = cap(longDay.format(x.d)) + (hourOf(x) ? " à " + hourOf(x) : "") + (x.e.lieu ? " · " + x.e.lieu : "");
       body.appendChild(el("p", "event-when", when));
