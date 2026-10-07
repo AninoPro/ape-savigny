@@ -22,9 +22,15 @@ window.APE_AGENDA = [
     details: "Dernier jour pour passer commande de sapins et de fromages."
   },
   {
-    date: "2026-12-04",
-    titre: "Livraison des sapins et fromages",
+    date: "2026-11-20",
+    titre: "Distribution des fromages",
     lieu: "Savigny-sur-Braye",
-    details: "Livraison des sapins de Noël et fromages commandés."
+    details: "Les fromages commandés arrivent le 20 novembre et sont distribués dans la foulée."
+  },
+  {
+    date: "2026-12-04",
+    titre: "Livraison des sapins",
+    lieu: "Savigny-sur-Braye",
+    details: "Livraison des sapins de Noël commandés."
   }
 ];
