@@ -58,7 +58,7 @@
       body.appendChild(el("p", "event-when", when));
       if (x.e.details) body.appendChild(el("p", "", x.e.details));
       if (x.e.lien) {
-        var l = el("a", "", "Plus d'informations");
+        var l = el("a", "", x.e.lienTexte || "Plus d'informations");
         l.href = x.e.lien;
         l.rel = "noopener";
         body.appendChild(l);
@@ -379,4 +379,214 @@
     document.getElementById("equipe").scrollIntoView();
     open(decodeURIComponent(m[1]));
   }
+})();
+
+// Ventes (data/ventes.js) : sous chaque événement concerné d'« Une année avec l'APE », un bouton par vente
+// ouvre le tiroir des choix et des prix. Consultation seulement : on commande avec le bon papier.
+// Liens directs : #prix-<evenement> (toutes les ventes de l'événement) ou #prix-<evenement>-<id>.
+(function () {
+  var data = window.APE_VENTES;
+  var drawer = document.getElementById("sale-drawer");
+  if (!data || !Array.isArray(data.ventes) || !drawer) return;
+
+  var dayFmt = new Intl.DateTimeFormat("fr-FR", { weekday: "long", day: "numeric", month: "long" });
+  var euro = new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR", maximumFractionDigits: 2, minimumFractionDigits: 0 });
+  var today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text) n.textContent = text;
+    return n;
+  }
+  function day(s) { return new Date(s + "T00:00"); }
+  function longDay(s) { return dayFmt.format(day(s)); }
+  function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+  function isOpen(v) { return !!v.commandeAvant && day(v.commandeAvant) >= today; }
+
+  function section(v, eventKey) {
+    var sec = el("section", "sale");
+    sec.id = "prix-" + eventKey + "-" + v.id;
+    sec.tabIndex = -1;
+    sec.appendChild(el("h3", "", v.titre));
+    if (v.intro) sec.appendChild(el("p", "sale-intro", v.intro));
+
+    if (isOpen(v)) {
+      var dates = el("dl", "sale-dates");
+      dates.appendChild(el("dt", "", "Date limite"));
+      dates.appendChild(el("dd", "", cap(longDay(v.commandeAvant))));
+      if (v.livraison) {
+        dates.appendChild(el("dt", "", "Livraison"));
+        dates.appendChild(el("dd", "", cap(longDay(v.livraison)) + (v.lieu ? ", " + v.lieu : "")));
+      }
+      sec.appendChild(dates);
+    } else {
+      sec.appendChild(el("p", "sale-closed", "Les commandes sont closes. Voici les prix de la dernière vente, à titre indicatif."));
+    }
+
+    if (v.grille) {
+      var g = v.grille;
+      var wrap = el("div", "sale-grid");
+      var table = el("table");
+      table.appendChild(el("caption", "", "Prix des " + v.titre.toLowerCase() + " selon la hauteur et la variété"));
+      var head = el("tr");
+      var corner = el("th", "", g.legende || "");
+      corner.scope = "col";
+      head.appendChild(corner);
+      g.colonnes.forEach(function (c) {
+        var th = el("th", "", c);
+        th.scope = "col";
+        head.appendChild(th);
+      });
+      var thead = el("thead");
+      thead.appendChild(head);
+      table.appendChild(thead);
+      var tbody = el("tbody");
+      g.lignes.forEach(function (row) {
+        var tr = el("tr");
+        var th = el("th", "", row[0]);
+        th.scope = "row";
+        tr.appendChild(th);
+        row.slice(1).forEach(function (p) { tr.appendChild(el("td", "", p == null ? "–" : euro.format(p))); });
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+      wrap.appendChild(table);
+      sec.appendChild(wrap);
+    }
+
+    if (v.produits) {
+      var list = el("ul", "sale-products");
+      v.produits.forEach(function (p) {
+        var li = el("li");
+        li.appendChild(el("h4", "", p.nom));
+        var rows = el("dl");
+        p.formats.forEach(function (f) {
+          rows.appendChild(el("dt", "", f[0]));
+          rows.appendChild(el("dd", "", euro.format(f[1])));
+        });
+        li.appendChild(rows);
+        list.appendChild(li);
+      });
+      sec.appendChild(list);
+    }
+
+    if (v.options && v.options.length) {
+      var opts = el("div", "sale-options");
+      opts.appendChild(el("h4", "", "En option"));
+      var dl = el("dl");
+      v.options.forEach(function (o) {
+        dl.appendChild(el("dt", "", o[0]));
+        dl.appendChild(el("dd", "", euro.format(o[1])));
+      });
+      opts.appendChild(dl);
+      sec.appendChild(opts);
+    }
+    if (v.note) sec.appendChild(el("p", "sale-note", v.note));
+    return sec;
+  }
+
+  function howTo() {
+    var box = el("section", "sale-how");
+    box.appendChild(el("h3", "", "Comment commander"));
+    var ol = el("ol");
+    [
+      "Remplissez le bon de commande distribué à l'école.",
+      "Glissez-le dans une enveloppe avec le règlement et rapportez-le à l'école avant la date limite.",
+      "Récupérez votre commande le jour de la livraison."
+    ].forEach(function (t) { ol.appendChild(el("li", "", t)); });
+    box.appendChild(ol);
+    if (data.reglement) box.appendChild(el("p", "", "Règlement : " + data.reglement.charAt(0).toLowerCase() + data.reglement.slice(1)));
+    var ask = el("p");
+    ask.appendChild(document.createTextNode("Pas de bon de commande ? Une question ? Écrivez-nous à "));
+    var a = el("a", "", "savigny.ape@gmail.com");
+    a.href = "mailto:savigny.ape@gmail.com";
+    ask.appendChild(a);
+    ask.appendChild(document.createTextNode("."));
+    box.appendChild(ask);
+    return box;
+  }
+
+  // Boutons sous chaque événement
+  var byEvent = {};
+  data.ventes.forEach(function (v) {
+    if (!v || !v.id || !v.evenement) return;
+    (byEvent[v.evenement] = byEvent[v.evenement] || []).push(v);
+  });
+  Object.keys(byEvent).forEach(function (key) {
+    var moment = document.querySelector('.moment[data-album="' + key + '"]');
+    if (!moment) { console.warn("Vente : aucun événement data-album=\"" + key + "\" dans index.html"); return; }
+    var ventes = byEvent[key];
+    var text = moment.querySelector(".moment-text");
+    var open = ventes.filter(isOpen).map(function (v) { return v.commandeAvant; }).sort()[0];
+    if (open) {
+      var tag = el("p", "moment-tag", "Commandes jusqu'au " + longDay(open).replace(/^\S+ /, ""));
+      text.insertBefore(tag, text.firstChild);
+    }
+    var box = el("div", "moment-sales");
+    ventes.forEach(function (v) {
+      var b = el("button", "btn btn--soft btn--small");
+      b.type = "button";
+      b.textContent = v.titre;
+      b.setAttribute("aria-label", v.titre + " : voir les choix et les prix");
+      b.addEventListener("click", function () { show(key, v.id); });
+      box.appendChild(b);
+    });
+    var label = el("p", "moment-sales-label", "Voir les choix et les prix");
+    label.setAttribute("aria-hidden", "true");
+    text.appendChild(label);
+    text.appendChild(box);
+  });
+
+  // Tiroir
+  var body = document.getElementById("sales-body");
+  var title = document.getElementById("sale-title");
+  var opener = null;
+
+  function show(key, id) {
+    var ventes = byEvent[key];
+    if (!ventes) return false;
+    body.textContent = "";
+    var notice = el("p", "sale-notice", "Pas de commande en ligne : ces prix sont donnés pour vous aider à remplir le bon de commande papier, qui fait foi.");
+    body.appendChild(notice);
+    ventes.forEach(function (v) { body.appendChild(section(v, key)); });
+    body.appendChild(howTo());
+    title.textContent = ventes.length > 1 ? "Choix et prix" : ventes[0].titre;
+    if (!drawer.open) {
+      opener = document.activeElement;
+      if (!(history.state && history.state.prix)) history.pushState({ prix: true }, "", "#prix-" + key + (id ? "-" + id : ""));
+      drawer.showModal();
+    }
+    var target = id && document.getElementById("prix-" + key + "-" + id);
+    if (target && ventes.length > 1) {
+      target.scrollIntoView({ block: "start" });
+      target.focus({ preventScroll: true });
+    } else body.scrollTop = 0;
+    return true;
+  }
+
+  drawer.querySelector(".drawer-close").addEventListener("click", function () { drawer.close(); });
+  drawer.addEventListener("click", function (e) { if (e.target === drawer) drawer.close(); });
+  drawer.addEventListener("close", function () {
+    if (history.state && history.state.prix) history.back();
+    if (opener && opener.focus) opener.focus();
+  });
+  window.addEventListener("popstate", function () {
+    if (drawer.open && !(history.state && history.state.prix)) drawer.close();
+  });
+
+  // Lien direct, au chargement ou depuis un lien de la page (agenda)
+  function fromHash() {
+    var m = location.hash.match(/^#prix-(.+)$/);
+    if (!m || drawer.open) return;
+    var rest = decodeURIComponent(m[1]);
+    var key = Object.keys(byEvent).filter(function (k) { return rest === k || rest.indexOf(k + "-") === 0; })[0];
+    if (!key) return;
+    if (!(history.state && history.state.prix)) history.replaceState(null, "", "#projets");
+    document.getElementById("projets").scrollIntoView();
+    show(key, rest.slice(key.length + 1));
+  }
+  window.addEventListener("hashchange", fromHash);
+  fromHash();
 })();

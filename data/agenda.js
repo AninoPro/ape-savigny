@@ -7,14 +7,17 @@
 //   details : une ou deux phrases (facultatif)
 //   etiquette : petite étiquette colorée au-dessus du titre (facultatif)
 //   lien    : adresse d'une page, par exemple l'événement Facebook (facultatif)
+//   lienTexte : texte du lien, « Plus d'informations » par défaut (facultatif)
 //
 // Les rendez-vous passés disparaissent tout seuls. L'ordre n'a pas d'importance.
 window.APE_AGENDA = [
   {
     date: "2026-10-12",
     titre: "Distribution des flyers de commande",
-    etiquette: "Plus d'infos sur les choix bientôt !",
-    details: "Les flyers pour commander sapins et fromages sont distribués. Très bientôt, les choix et les prix seront aussi consultables sur ce site. Date limite de commande : 10 novembre."
+    etiquette: "Choix et prix sur le site",
+    details: "Les flyers pour commander sapins et fromages sont distribués à l'école. Les choix et les prix sont aussi consultables ici. Date limite de commande : 10 novembre.",
+    lien: "#prix-vente-sapins",
+    lienTexte: "Voir les choix et les prix"
   },
   {
     date: "2026-11-10",
