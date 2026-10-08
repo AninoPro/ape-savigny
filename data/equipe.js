@@ -29,7 +29,10 @@ window.APE_EQUIPE = {
       role: "Présidente",
       photo: "valerie",
       metier: "Clerc de notaire",
-      enfants: "Maman d'une collégienne de 11 ans et de Jules, en CM2"
+      enfants: "Maman d'une collégienne de 11 ans et de Jules, en CM2",
+      presentation: `Membre de l'APE pour la 6e année, je suis présidente pour ma dernière année au sein de cette association qui m'a tant apporté sur le plan humain ! J'y ai rencontré de bons copains et même des amis. Être à l'APE, c'est donner un peu de temps, faire quelques réunions… mais c'est surtout donner à mes enfants un formidable exemple de solidarité et d'entraide.
+
+En dehors de l'APE, je fais du sport, je lis pas mal, et j'aime beaucoup la déco et la mode.`
     },
     { prenom: "Cassandre", role: "Vice-présidente" },
     {
