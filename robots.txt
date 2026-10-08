@@ -2,3 +2,5 @@
 User-agent: *
 Disallow: /data/equipe.js
 Disallow: /assets/img/equipe/
+
+Sitemap: https://ape-savigny.fr/sitemap.xml
