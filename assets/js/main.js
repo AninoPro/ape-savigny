@@ -344,7 +344,10 @@
       facts.appendChild(el("dd", "", f[1]));
     });
     if (facts.children.length) body.appendChild(facts);
-    if (m.presentation) body.appendChild(el("p", "member-text", m.presentation));
+    // Une ligne vide dans la présentation sépare deux paragraphes
+    if (m.presentation) m.presentation.split(/\n\s*\n/).forEach(function (t) {
+      body.appendChild(el("p", "member-text", t.trim()));
+    });
     li.appendChild(body);
     list.appendChild(li);
   });

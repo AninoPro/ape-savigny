@@ -305,6 +305,7 @@ body:has(.viewer[open]) { overflow: hidden; }
 .member-facts dt { font-size: 0.78rem; font-weight: 700; color: var(--violet-deep); text-transform: uppercase; letter-spacing: 0.04em; }
 .member-facts dd { margin: 0 0 0.5rem; color: var(--muted); }
 .member-text { font-size: 0.98rem; line-height: 1.5; margin: 0; }
+.member-text + .member-text { margin-top: 0.6rem; }
 body:has(.drawer[open]) { overflow: hidden; }
 
 /* Ventes : boutons sous l'événement et tiroir des choix et prix (consultation seulement) */
