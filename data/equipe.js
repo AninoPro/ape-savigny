@@ -84,7 +84,14 @@ C’est donc avec beaucoup de plaisir que je poursuis cette belle aventure au se
 Par contre je suis une ex-championne de boxe alors en garde ! 🥊`
     },
     { prenom: "Laura", role: "Membre", metier: "Assistante manager", enfants: "Maman d'un enfant en moyenne section" },
-    { prenom: "Manon", role: "Membre", enfants: "Maman de deux enfants, en grande section et en petite section" },
+    {
+      prenom: "Manon",
+      role: "Membre",
+      photo: "manon",
+      metier: "Enseignante",
+      enfants: "Maman de deux enfants, en grande section et en petite section",
+      presentation: "Enseignante le jour, maman de deux loulous en grande et petite section le reste du temps : l’école, je la vis des deux côtés ! Mon fil rouge, c’est le bien-être des enfants, à la maison comme à l’école 🧘‍♀️"
+    },
     { prenom: "Bénédicte", role: "Membre", enfants: "Maman d'un enfant en moyenne section" },
 
     // Exemple à copier (sans les // au début des lignes) :
