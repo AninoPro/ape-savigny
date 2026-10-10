@@ -424,6 +424,12 @@
         dates.appendChild(el("dd", "", cap(longDay(v.livraison)) + (v.lieu ? ", " + v.lieu : "")));
       }
       sec.appendChild(dates);
+      if (v.bon) {
+        var pdf = el("a", "btn btn--soft btn--small sale-download", "Télécharger le bon de commande (PDF)");
+        pdf.href = v.bon;
+        pdf.setAttribute("download", "");
+        sec.appendChild(pdf);
+      }
     } else {
       sec.appendChild(el("p", "sale-closed", "Les commandes sont closes. Voici les prix de la dernière vente, à titre indicatif."));
     }
@@ -495,14 +501,14 @@
     box.appendChild(el("h3", "", "Comment commander"));
     var ol = el("ol");
     [
-      "Remplissez le bon de commande distribué à l'école.",
+      "Remplissez le bon de commande distribué à l'école, ou téléchargez-le et imprimez-le.",
       "Glissez-le dans une enveloppe avec le règlement et rapportez-le à l'école avant la date limite.",
       "Récupérez votre commande le jour de la livraison."
     ].forEach(function (t) { ol.appendChild(el("li", "", t)); });
     box.appendChild(ol);
     if (data.reglement) box.appendChild(el("p", "", "Règlement : " + data.reglement.charAt(0).toLowerCase() + data.reglement.slice(1)));
     var ask = el("p");
-    ask.appendChild(document.createTextNode("Pas de bon de commande ? Une question ? Écrivez-nous à "));
+    ask.appendChild(document.createTextNode("Une question ? Écrivez-nous à "));
     var a = el("a", "", "savigny.ape@gmail.com");
     a.href = "mailto:savigny.ape@gmail.com";
     ask.appendChild(a);

@@ -15,6 +15,8 @@
 //   produits     : … ou une liste de produits, chacun avec ses formats [format, prix]
 //   options      : suppléments [libellé, prix] (facultatif)
 //   note         : une remarque affichée en bas (facultatif)
+//   bon          : le bon de commande à télécharger, en PDF, rangé dans assets/bons/ (facultatif).
+//                  Proposé seulement tant que les commandes sont ouvertes.
 //
 // Prix en euros, sans le signe €.
 window.APE_VENTES = {
@@ -27,7 +29,8 @@ window.APE_VENTES = {
       intro: "Des sapins locaux, coupés, vendus au bénéfice des enfants des écoles de Savigny-sur-Braye.",
       commandeAvant: "2026-11-10",
       livraison: "2026-12-04",
-      lieu: "sur le parking de l'école",
+      lieu: "entre 16 h et 17 h, sur le parking de la garderie",
+      bon: "assets/bons/bon-commande-sapins-2026.pdf",
       grille: {
         legende: "Hauteur (cm)",
         colonnes: ["Épicéa", "Pungens", "Nordmann"],
@@ -38,7 +41,8 @@ window.APE_VENTES = {
           ["175 – 200", 18, 30, 41],
           ["200 – 250", 25, 42, 52],
           ["250 – 300", 34, 55, 68],
-          ["300 – 400", 61, 77, 87]
+          ["300 – 400", 61, 77, 87],
+          ["400 – 500", 77, null, null]
         ]
       },
       options: [
@@ -53,6 +57,7 @@ window.APE_VENTES = {
       intro: "Des fromages de la Ferme de l'Oiseau.",
       commandeAvant: "2026-11-10",
       livraison: "2026-11-20",
+      bon: "assets/bons/bon-commande-fromages-2026.pdf",
       produits: [
         { nom: "Saint-Nectaire", formats: [["Entier, environ 1,5 kg", 28], ["Demi, 800 g", 15], ["Quart, 400 g", 8]] },
         { nom: "Cantal", formats: [["1 kg", 20], ["500 g", 11]] },

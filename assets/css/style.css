@@ -320,6 +320,7 @@ body:has(.drawer[open]) { overflow: hidden; }
 .sale:focus { outline: none; }
 .sale h3 { font-size: 1.45rem; margin-bottom: 0.4rem; }
 .sale-intro { font-size: 0.98rem; color: var(--muted); margin-bottom: 1rem; }
+.sale-download { margin: -0.4rem 0 1.3rem; }
 .sale-closed { font-size: 0.95rem; font-weight: 600; color: var(--violet-deep); }
 .sale-dates { display: grid; grid-template-columns: auto 1fr; gap: 0.3rem 1rem; margin: 0 0 1.2rem; font-size: 0.98rem; line-height: 1.4; }
 .sale-dates dt { font-size: 0.78rem; font-weight: 700; color: var(--violet-deep); text-transform: uppercase; letter-spacing: 0.04em; padding-top: 0.15rem; }
