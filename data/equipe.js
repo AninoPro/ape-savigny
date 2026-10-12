@@ -72,7 +72,16 @@ C’est donc avec beaucoup de plaisir que je poursuis cette belle aventure au se
     },
     { prenom: "Céline", role: "Membre", metier: "Animatrice d'ateliers de développement personnel", enfants: "Maman de trois enfants : un en grande section, un en moyenne section et un petit de 2 ans" },
     { prenom: "Alexia", role: "Membre", metier: "Agricultrice" },
-    { prenom: "Hind", role: "Membre", metier: "Mère au foyer", enfants: "Maman d'un enfant en petite section, dans la classe de Camille" },
+    {
+      prenom: "Hind",
+      role: "Membre",
+      photo: "hind",
+      metier: "Mère au foyer",
+      enfants: "Maman de Zaïm, en petite section, dans la classe de Camille, et d’un petit garçon de 16 mois",
+      presentation: `Maman de Zaïm en petite section et d’un autre fils de 16 mois à la maison avec moi.
+
+J’aime passer du temps avec ma famille, partager des moments avec mes enfants, découvrir de nouvelles choses et laisser parler ma créativité.`
+    },
     {
       prenom: "Cassandra",
       role: "Membre",
