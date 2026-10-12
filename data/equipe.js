@@ -78,7 +78,7 @@ C’est donc avec beaucoup de plaisir que je poursuis cette belle aventure au se
       photo: "hind",
       metier: "Mère au foyer",
       enfants: "Maman de Zaïm, en petite section, dans la classe de Camille, et d’un petit garçon de 16 mois",
-      presentation: `Maman de Zaïm en petite section et d’un autre fils de 16 mois à la maison avec moi.
+      presentation: `Maman au foyer, je passe mes journées à la maison avec mon petit dernier de 16 mois.
 
 J’aime passer du temps avec ma famille, partager des moments avec mes enfants, découvrir de nouvelles choses et laisser parler ma créativité.`
     },
