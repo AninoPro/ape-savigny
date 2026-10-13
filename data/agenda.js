@@ -22,7 +22,9 @@ window.APE_AGENDA = [
   {
     date: "2026-11-10",
     titre: "Date limite de commande",
-    details: "Dernier jour pour passer commande de sapins et de fromages."
+    details: "Dernier jour pour passer commande de sapins et de fromages.",
+    lien: "#prix-vente-sapins",
+    lienTexte: "Voir les choix et les prix"
   },
   {
     date: "2026-11-20",
