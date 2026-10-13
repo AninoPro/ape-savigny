@@ -86,9 +86,9 @@ C’est donc avec beaucoup de plaisir que je poursuis cette belle aventure au se
       photo: "cassandra",
       metier: "Technicienne de laboratoire",
       enfants: "Maman de Liliana, en petite section, dans la classe de Marianne et Romy",
-      presentation: `Je suis assez sportive et j'adore rire ! Au quotidien pour le moment je suis en recherche d'emploi parce qu'on vient de s'installer dans la région, donc j'ai beaucoup de temps à consacrer à la rénovation de notre maison et à plein d'activités. J'aime aussi la bonne cuisine et jouer aux jeux de société ! En plus contrairement à monsieur je ne suis pas mauvaise perdante 😂
+      presentation: `Nous venons tout juste d'arriver dans la région ! En attendant de retrouver un poste, je profite de ce temps pour rénover notre maison et me lancer dans plein d'activités.
 
-Par contre je suis une ex-championne de boxe alors en garde ! 🥊`
+Sportive et bonne vivante, j'adore rire, bien manger et jouer aux jeux de société (et je sais perdre, moi !). Mais attention : je suis une ancienne championne de boxe alors gare à vous ! 🥊`
     },
     { prenom: "Laura", role: "Membre", metier: "Assistante manager", enfants: "Maman d'un enfant en moyenne section" },
     {
