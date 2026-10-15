@@ -67,8 +67,12 @@ C’est donc avec beaucoup de plaisir que je poursuis cette belle aventure au se
       role: "Vice-secrétaire",
       photo: "adeline-r",
       metier: "Auto-entrepreneuse dans le bien-être et la connaissance de soi",
-      enfants: "Maman d'un enfant en petite section, dans la classe de Camille",
-      presentation: "Adeline, auto entrepreneuse dans le domaine du bien-être et de la connaissance de soi. Maman de Margaux, petite section, dans la classe de Camille. 😊"
+      enfants: "Maman de Margaux, en petite section, dans la classe de Camille, et de Noé, 14 mois",
+      presentation: `Je suis maman de Margaux, en petite section, et de Noé, 14 mois.
+
+J'ai à cœur d'aider les femmes à prendre soin d'elles, à ne pas s'oublier, et à apprendre à se connaître réellement.
+
+Je suis ravie aujourd'hui de rejoindre l'APE pour pouvoir faire plaisir à nos enfants : proposer des évènements conviviaux et partager de bons moments.`
     },
     { prenom: "Céline", role: "Membre", metier: "Animatrice d'ateliers de développement personnel", enfants: "Maman de trois enfants : un en grande section, un en moyenne section et un petit de 2 ans" },
     { prenom: "Alexia", role: "Membre", metier: "Agricultrice" },
