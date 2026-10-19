@@ -8,6 +8,8 @@
 //   etiquette : petite étiquette colorée au-dessus du titre (facultatif)
 //   lien    : adresse d'une page, par exemple l'événement Facebook (facultatif)
 //   lienTexte : texte du lien, « Plus d'informations » par défaut (facultatif)
+//   image   : une image très pâle en fond de carte, rangée dans assets/img/agenda/ (facultatif)
+//   bouton  : true pour afficher le lien comme un bouton (facultatif)
 //
 // Les rendez-vous passés disparaissent tout seuls. L'ordre n'a pas d'importance.
 window.APE_AGENDA = [
@@ -25,6 +27,15 @@ window.APE_AGENDA = [
     details: "Dernier jour pour passer commande de sapins et de fromages.",
     lien: "#prix-vente-sapins",
     lienTexte: "Voir les choix et les prix"
+  },
+  {
+    date: "2026-11-13",
+    titre: "Vente de chocolats de Noël de la maternelle",
+    image: "assets/img/agenda/chocolats-noel-2026.webp",
+    details: "Les Chocolats du Cœur, au profit de la coopérative scolaire de la maternelle. Commande en ligne avant le 13 novembre, ou avec le catalogue distribué à l'école.",
+    lien: "https://asso.initiatives.fr/q/ALHNLH",
+    lienTexte: "Commandez ici",
+    bouton: true
   },
   {
     date: "2026-11-20",

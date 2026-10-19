@@ -4,7 +4,7 @@ Site statique (HTML, CSS, un peu de JavaScript). Pas de build, pas de dépendanc
 
 ## Modifier le site
 
-- **Mettre à jour l'agenda** (section « Prochains rendez-vous », carte d'accueil, carte « Rejoindre ») : uniquement `data/agenda.js`. Copier un bloc, changer la date, le titre, le lieu. Les dates passées disparaissent seules, et sans rendez-vous futur la section renvoie vers Facebook.
+- **Mettre à jour l'agenda** (section « Prochains rendez-vous », carte d'accueil, carte « Rejoindre ») : uniquement `data/agenda.js`. Copier un bloc, changer la date, le titre, le lieu. Les dates passées disparaissent seules, et sans rendez-vous futur la section renvoie vers Facebook. Une carte peut avoir une image de fond très pâle (`image`, rangée dans `assets/img/agenda/`) et un lien en forme de bouton (`bouton: true`).
 - **Ajouter des photos d'un événement** (section « Une année avec l'APE ») :
   1. Ranger les photos dans `photos/<evenement>/<annee>/`, par exemple `photos/kermesse/2026/`. Ce dossier contient les originaux et n'est **pas publié** (il est dans `.gitignore`).
   2. Lancer `python3 scripts/photos.py` (nécessite Pillow : `pip3 install Pillow`). Le script numérote les photos, crée les versions WebP dans `assets/img/albums/` et affiche un bloc à coller dans `data/albums.js`.

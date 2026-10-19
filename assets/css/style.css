@@ -158,6 +158,9 @@ section { padding-block: clamp(3.5rem, 9vw, 7rem); }
 .event-date { position: absolute; top: -0.15rem; left: 1.7rem; display: flex; gap: 0.35rem; align-items: baseline; color: var(--violet-deep); font: 800 1.15rem/1 var(--display); background: var(--lilac-50); padding: 0.2rem 0.5rem; }
 .event-date span { font-weight: 600; font-size: 0.95rem; }
 .event-card { display: flex; flex-direction: column; gap: 0.5rem; align-items: flex-start; background: #fff; border-radius: var(--r-lg); padding: 1.3rem 1.4rem; box-shadow: var(--shadow); height: 100%; }
+.event-card--image { position: relative; isolation: isolate; overflow: hidden; }
+.event-bg { position: absolute; inset: 0; z-index: -1; background: center / cover no-repeat; opacity: 0.12; }
+.event-card .btn { margin-top: 0.3rem; }
 .event-tag { display: inline-block; background: var(--sun); color: var(--ink); font-size: 0.8rem; font-weight: 700; padding: 0.25rem 0.7rem; border-radius: 99px; }
 .event-card h3 { margin: 0; font-size: 1.1rem; }
 .event-when { font-weight: 700; color: var(--violet-deep); font-size: 0.95rem; margin: 0; }

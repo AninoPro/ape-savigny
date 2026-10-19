@@ -52,13 +52,20 @@
       badge.appendChild(el("b", "", dayNum.format(x.d)));
       badge.appendChild(el("span", "", monthShort.format(x.d)));
       var body = el("div", "event-card");
+      if (x.e.image) {
+        body.classList.add("event-card--image");
+        var bg = el("span", "event-bg");
+        bg.style.backgroundImage = "url(\"" + x.e.image + "\")";
+        bg.setAttribute("aria-hidden", "true");
+        body.appendChild(bg);
+      }
       if (x.e.etiquette) body.appendChild(el("span", "event-tag", x.e.etiquette));
       body.appendChild(el("h3", "", x.e.titre));
       var when = cap(longDay.format(x.d)) + (hourOf(x) ? " à " + hourOf(x) : "") + (x.e.lieu ? " · " + x.e.lieu : "");
       body.appendChild(el("p", "event-when", when));
       if (x.e.details) body.appendChild(el("p", "", x.e.details));
       if (x.e.lien) {
-        var l = el("a", "", x.e.lienTexte || "Plus d'informations");
+        var l = el("a", x.e.bouton ? "btn btn--small" : "", x.e.lienTexte || "Plus d'informations");
         l.href = x.e.lien;
         l.rel = "noopener";
         body.appendChild(l);
