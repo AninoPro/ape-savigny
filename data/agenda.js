@@ -38,10 +38,10 @@ window.APE_AGENDA = [
     bouton: true
   },
   {
-    date: "2026-11-20",
+    date: "2026-11-23",
     titre: "Distribution des fromages",
     lieu: "Savigny-sur-Braye",
-    details: "Les fromages commandés arrivent le 20 novembre et sont distribués dans la foulée."
+    details: "Les fromages commandés arrivent le 23 novembre et sont distribués dans la foulée."
   },
   {
     date: "2026-12-04",

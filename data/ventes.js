@@ -56,7 +56,7 @@ window.APE_VENTES = {
       titre: "Fromages d'Auvergne",
       intro: "Des fromages de la Ferme de l'Oiseau.",
       commandeAvant: "2026-11-10",
-      livraison: "2026-11-20",
+      livraison: "2026-11-23",
       bon: "assets/bons/bon-commande-fromages-2026.pdf",
       produits: [
         { nom: "Saint-Nectaire", formats: [["Entier, environ 1,5 kg", 28], ["Demi, 800 g", 15], ["Quart, 400 g", 8]] },
