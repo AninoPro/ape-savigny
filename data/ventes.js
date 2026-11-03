@@ -35,12 +35,12 @@ window.APE_VENTES = {
         legende: "Hauteur (cm)",
         colonnes: ["Épicéa", "Pungens", "Nordmann"],
         lignes: [
-          ["100 – 125", 12, 17, 26],
-          ["125 – 150", 13, 20, 30],
-          ["150 – 175", 16, 25, 35],
-          ["175 – 200", 18, 30, 41],
-          ["200 – 250", 25, 42, 52],
-          ["250 – 300", 34, 55, 68],
+          ["100 – 125", null, 17, 26],
+          ["125 – 150", null, 20, 30],
+          ["150 – 175", null, 25, 35],
+          ["175 – 200", null, 30, 41],
+          ["200 – 250", null, 42, 52],
+          ["250 – 300", null, 55, 68],
           ["300 – 400", 61, 77, 87],
           ["400 – 500", 77, null, null]
         ]
@@ -48,7 +48,8 @@ window.APE_VENTES = {
       options: [
         ["Support : demi-bûche percée", 6],
         ["Livraison à domicile, à moins de 8 km de Savigny (particuliers)", 3]
-      ]
+      ],
+      note: "Cette année, pas d'épicéa de moins de 3 mètres : les sécheresses de l'été ont touché les plantations."
     },
     {
       id: "fromages",
