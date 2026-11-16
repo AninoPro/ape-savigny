@@ -53,5 +53,10 @@ window.APE_AGENDA = [
     titre: "Fête du jeu",
     lieu: "Savigny-sur-Braye",
     details: "L'APE tient la buvette et la restauration."
+  },
+  {
+    date: "2027-06-26",
+    titre: "Kermesse de fin d'année",
+    details: "Stands de jeux, tombola et repas le soir : les élèves finissent l'année en fête."
   }
 ];
