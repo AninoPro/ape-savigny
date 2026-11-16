@@ -38,14 +38,20 @@ window.APE_AGENDA = [
   },
   {
     date: "2026-12-19T14:00",
-    titre: "Distribution des brioches et purées de fruits",
-    lieu: "Marché de Noël de Savigny",
-    details: "Les commandes sont à récupérer de 14 h à 17 h 30."
+    titre: "Marché de Noël de Savigny",
+    etiquette: "Stand de l'APE et petit train",
+    details: "Retrouvez le stand de l'APE de 14 h à 17 h 30 et la balade en petit train pour les enfants de 15 h à 17 h 30. Les brioches et purées de fruits commandées sont à récupérer sur le stand."
   },
   {
     date: "2026-12-04",
     titre: "Livraison des sapins",
     lieu: "Savigny-sur-Braye",
     details: "Livraison des sapins de Noël commandés."
+  },
+  {
+    date: "2027-05-14",
+    titre: "Fête du jeu",
+    lieu: "Savigny-sur-Braye",
+    details: "L'APE tient la buvette et la restauration."
   }
 ];

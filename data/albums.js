@@ -6,7 +6,7 @@
 //   3. remplissez le bloc :
 //      dossier    : nom du dossier créé dans assets/img/albums/ (ne pas modifier)
 //      evenement  : l'événement sous lequel l'album s'affiche, tel qu'écrit dans data-album="…" dans index.html
-//                   (vente-sapins, marche-noel, classe-neige, carnabal, ventes-printemps, fete-du-jeu, kermesse)
+//                   (vente-sapins, marche-noel, classe-neige, ventes-printemps, paques, fete-du-jeu, kermesse)
 //      titre      : le nom de l'album, affiché dans la visionneuse
 //      date       : "AAAA-MM" (ou "AAAA" si le mois n'est pas connu), sert aussi au tri
 //      couverture : numéro de la photo mise en avant (pour l'album le plus récent de l'événement)
