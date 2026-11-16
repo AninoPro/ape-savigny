@@ -23,50 +23,25 @@ window.APE_VENTES = {
   reglement: "En espèces ou par chèque à l'ordre de l'APE de Savigny-sur-Braye.",
   ventes: [
     {
-      id: "sapins",
+      id: "brioches",
       evenement: "vente-sapins",
-      titre: "Sapins de Noël",
-      intro: "Des sapins locaux, coupés, vendus au bénéfice des enfants des écoles de Savigny-sur-Braye.",
-      commandeAvant: "2026-11-10",
-      livraison: "2026-12-04",
-      lieu: "entre 16 h et 17 h, sur le parking de la garderie",
-      bon: "assets/bons/bon-commande-sapins-2026.pdf",
-      grille: {
-        legende: "Hauteur (cm)",
-        colonnes: ["Épicéa", "Pungens", "Nordmann"],
-        lignes: [
-          ["100 – 125", null, 17, 26],
-          ["125 – 150", null, 20, 30],
-          ["150 – 175", null, 25, 35],
-          ["175 – 200", null, 30, 41],
-          ["200 – 250", null, 42, 52],
-          ["250 – 300", null, 55, 68],
-          ["300 – 400", 61, 77, 87],
-          ["400 – 500", 77, null, null]
-        ]
-      },
-      options: [
-        ["Support : demi-bûche percée", 6],
-        ["Livraison à domicile, à moins de 8 km de Savigny (particuliers)", 3]
-      ],
-      note: "Cette année, pas d'épicéa de moins de 3 mètres : les sécheresses de l'été ont touché les plantations."
-    },
-    {
-      id: "fromages",
-      evenement: "vente-sapins",
-      titre: "Fromages d'Auvergne",
-      intro: "Des fromages de la Ferme de l'Oiseau.",
-      commandeAvant: "2026-11-10",
-      livraison: "2026-11-23",
-      bon: "assets/bons/bon-commande-fromages-2026.pdf",
+      titre: "Brioches et purées de fruits",
+      intro: "Des brioches de Vendrennes (à conserver 21 jours, ou à congeler) et des purées de fruits Millefruits en gourdes de 90 g, sans sucres ajoutés, sans arômes ajoutés et sans conservateurs.",
+      commandeAvant: "2026-11-30",
+      livraison: "2026-12-19",
+      lieu: "de 14 h à 17 h 30, au marché de Noël de Savigny",
+      bon: "assets/bons/bon-commande-brioches-2026.pdf",
       produits: [
-        { nom: "Saint-Nectaire", formats: [["Entier, environ 1,5 kg", 28], ["Demi, 800 g", 15], ["Quart, 400 g", 8]] },
-        { nom: "Cantal", formats: [["1 kg", 20], ["500 g", 11]] },
-        { nom: "Salers", formats: [["1 kg", 25], ["500 g", 14]] },
-        { nom: "Bleu d'Auvergne", formats: [["500 g", 12]] },
-        { nom: "Fourme d'Ambert", formats: [["500 g", 12]] }
+        { nom: "Brioche L'originale", formats: [["350 g", 4], ["700 g", 5.5]] },
+        { nom: "Brioche aux pépites de chocolat", formats: [["400 g", 5]] },
+        { nom: "Gâche pur beurre (nouveau)", formats: [["500 g", 5.5]] },
+        { nom: "Purée de pomme", formats: [["Carton de 50 gourdes", 20]] },
+        { nom: "Purée de pomme et poire", formats: [["Carton de 50 gourdes", 25]] },
+        { nom: "Purée de pomme et fraise", formats: [["Carton de 50 gourdes", 25]] },
+        { nom: "Purée de pomme et banane", formats: [["Carton de 50 gourdes", 25]] },
+        { nom: "Panachage de purées", formats: [["8 étuis de 12 gourdes (96 gourdes) : 3 pomme, 3 pomme-poire, 3 pomme-fraise, 3 pomme-banane", 45]] }
       ],
-      note: "Tous les fromages sont au lait cru."
+      note: "Les gourdes se conservent 15 mois. Les chèques sont encaissés à la livraison."
     }
   ]
 };

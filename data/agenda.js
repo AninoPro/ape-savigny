@@ -14,21 +14,6 @@
 // Les rendez-vous passés disparaissent tout seuls. L'ordre n'a pas d'importance.
 window.APE_AGENDA = [
   {
-    date: "2026-10-12",
-    titre: "Distribution des flyers de commande",
-    etiquette: "Choix et prix sur le site",
-    details: "Les flyers pour commander sapins et fromages sont distribués à l'école. Les choix et les prix sont aussi consultables ici. Date limite de commande : 10 novembre.",
-    lien: "#prix-vente-sapins",
-    lienTexte: "Voir les choix et les prix"
-  },
-  {
-    date: "2026-11-10",
-    titre: "Date limite de commande",
-    details: "Dernier jour pour passer commande de sapins et de fromages.",
-    lien: "#prix-vente-sapins",
-    lienTexte: "Voir les choix et les prix"
-  },
-  {
     date: "2026-11-13",
     titre: "Vente de chocolats de Noël de la maternelle",
     image: "assets/img/agenda/chocolats-noel-2026.webp",
@@ -42,6 +27,20 @@ window.APE_AGENDA = [
     titre: "Distribution des fromages",
     lieu: "Savigny-sur-Braye",
     details: "Les fromages commandés arrivent le 23 novembre et sont distribués dans la foulée."
+  },
+  {
+    date: "2026-11-30",
+    titre: "Brioches et purées de fruits : date limite de commande",
+    etiquette: "Choix et prix sur le site",
+    details: "Dernier jour pour rapporter à l'école le bon de commande des brioches de Vendrennes et des gourdes de purée de fruits, avec le règlement.",
+    lien: "#prix-vente-sapins-brioches",
+    lienTexte: "Voir les choix et les prix"
+  },
+  {
+    date: "2026-12-19T14:00",
+    titre: "Distribution des brioches et purées de fruits",
+    lieu: "Marché de Noël de Savigny",
+    details: "Les commandes sont à récupérer de 14 h à 17 h 30."
   },
   {
     date: "2026-12-04",
